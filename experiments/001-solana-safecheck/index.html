@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solana SafeCheck</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 64px;
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0d1117; color: #e6edf3;
+    max-width: 640px; margin-inline: auto;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: #8b949e; font-size: 13px; margin: 0 0 20px; }
+  .row-input { display: flex; gap: 8px; }
+  input {
+    flex: 1; min-width: 0; padding: 10px 12px; font-size: 14px;
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px; color: #e6edf3;
+  }
+  button {
+    padding: 10px 16px; font-size: 14px; font-weight: 600; cursor: pointer;
+    background: #238636; border: 1px solid #2ea043; border-radius: 8px; color: #fff;
+  }
+  button.sec { background: #21262d; border-color: #30363d; color: #e6edf3; }
+  button:disabled { opacity: .5; cursor: default; }
+  .examples { font-size: 12px; color: #8b949e; margin: 8px 0 0; }
+  .examples a { color: #58a6ff; cursor: pointer; text-decoration: underline; }
+  .verdict {
+    margin: 24px 0 4px; padding: 16px; border-radius: 10px; font-weight: 700; font-size: 18px;
+    border: 1px solid #30363d;
+  }
+  .verdict small { display: block; font-weight: 400; font-size: 13px; margin-top: 6px; color: #c9d1d9; }
+  .v-PASS { background: #0f2e18; border-color: #2ea043; }
+  .v-CAUTION { background: #3a2d05; border-color: #d29922; }
+  .v-KILL { background: #3a0d0d; border-color: #f85149; }
+  .v-ERR { background: #21262d; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+  td { padding: 10px 8px; border-top: 1px solid #21262d; vertical-align: top; }
+  td:first-child { color: #8b949e; width: 42%; }
+  .tag { font-weight: 600; }
+  .tag.ok { color: #3fb950; }
+  .tag.warn { color: #d29922; }
+  .tag.bad { color: #f85149; }
+  .tag.nd { color: #8b949e; }
+  footer { margin-top: 28px; font-size: 12px; color: #6e7681; }
+  footer b { color: #8b949e; }
+  #copybar { margin-top: 16px; display: none; gap: 8px; }
+  #copied { font-size: 12px; color: #3fb950; align-self: center; display: none; }
+</style>
+</head>
+<body>
+  <h1>Solana SafeCheck</h1>
+  <p class="sub">Pegá un contract address. 5 señales básicas de riesgo + veredicto. Sin wallet, sin firmar nada, sin login.</p>
+
+  <div class="row-input">
+    <input id="ca" placeholder="Contract address del token (mint)" autocomplete="off" spellcheck="false">
+    <button id="go">Analizar</button>
+  </div>
+  <p class="examples">Ejemplos:
+    <a data-ca="DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263">BONK</a> ·
+    <a data-ca="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v">USDC</a>
+  </p>
+
+  <div id="out"></div>
+
+  <div id="copybar">
+    <button class="sec" id="copy">Copiar resultado</button>
+    <button class="sec" id="share">Copiar link</button>
+    <span id="copied">copiado</span>
+  </div>
+
+  <footer>
+    <b>No es consejo de inversión.</b> Esta herramienta solo lee datos públicos on-chain y de DexScreener.
+    No ejecuta operaciones, no toca tu wallet y no te pide firmar transacciones.
+    Si algo te pide firmar una tx para "revisar" un token, cerrá la pestaña.
+    Los datos marcados <i>n/d</i> no se pudieron obtener (RPC público con límite de uso) y no se inventan.
+    "Top-10 holders" queda casi siempre en <i>n/d</i>: no hay RPC gratuito que lo permita desde el navegador.
+    Fuentes: solana-rpc.publicnode.com, solana.api.onfinality.io, api.dexscreener.com.
+  </footer>
+
+<script>
+// RPC públicos, sin API key, con CORS abierto para browser.
+// publicnode responde getAccountInfo pero bloquea getTokenLargestAccounts;
+// onfinality lo permite pero con rate-limit agresivo -> señal 4 suele quedar n/d.
+const RPC_ACCOUNT = "https://solana-rpc.publicnode.com";
+const RPC_HOLDERS = "https://solana.api.onfinality.io/public";
+const $ = s => document.querySelector(s);
+let lastText = "", lastCa = "";
+
+function tag(kind, txt) { return `<span class="tag ${kind}">${txt}</span>`; }
+
+async function rpc(endpoint, method, params) {
+  const r = await fetch(endpoint, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 1, method, params })
+  });
+  if (!r.ok) throw new Error("rpc " + r.status);
+  const j = await r.json();
+  if (j.error) throw new Error(j.error.message || "rpc error");
+  return j.result;
+}
+
+async function getMint(ca) {
+  const res = await rpc(RPC_ACCOUNT, "getAccountInfo", [ca, { encoding: "jsonParsed" }]);
+  const info = res && res.value && res.value.data && res.value.data.parsed && res.value.data.parsed.info;
+  if (!info) throw new Error("no es un mint SPL válido");
+  return {
+    mintAuthority: info.mintAuthority || null,
+    freezeAuthority: info.freezeAuthority || null,
+    supply: Number(info.supply),
+    decimals: info.decimals
+  };
+}
+
+async function getConcentration(ca, supplyRaw) {
+  const res = await rpc(RPC_HOLDERS, "getTokenLargestAccounts", [ca]);
+  const list = (res && res.value) || [];
+  if (!list.length || !supplyRaw) return null;
+  const top = list.slice(0, 10).reduce((s, a) => s + Number(a.amount), 0);
+  return (top / supplyRaw) * 100;
+}
+
+async function getDex(ca) {
+  const r = await fetch("https://api.dexscreener.com/latest/dex/tokens/" + encodeURIComponent(ca));
+  if (!r.ok) throw new Error("dexscreener " + r.status);
+  const j = await r.json();
+  const pairs = (j.pairs || []).filter(p => p.chainId === "solana");
+  if (!pairs.length) return { found: false };
+  pairs.sort((a, b) => (b.liquidity && b.liquidity.usd || 0) - (a.liquidity && a.liquidity.usd || 0));
+  const p = pairs[0];
+  return {
+    found: true,
+    liqUsd: p.liquidity && typeof p.liquidity.usd === "number" ? p.liquidity.usd : null,
+    createdAt: p.pairCreatedAt || null,
+    dexId: p.dexId || "?"
+  };
+}
+
+function fmtUsd(n) {
+  if (n == null) return "n/d";
+  return "$" + Math.round(n).toLocaleString("es");
+}
+
+async function analyze(ca) {
+  ca = ca.trim();
+  lastCa = ca;
+  $("#copybar").style.display = "none";
+  $("#copied").style.display = "none";
+  if (!/^[1-9A-HJ-NP-Za-km-z]{32,44}$/.test(ca)) {
+    $("#out").innerHTML = `<div class="verdict v-ERR">Address inválido<small>No parece un address base58 de Solana (32–44 caracteres).</small></div>`;
+    return;
+  }
+  $("#go").disabled = true;
+  $("#out").innerHTML = `<div class="verdict v-ERR">Analizando…</div>`;
+
+  const [mintR, dexR] = await Promise.allSettled([getMint(ca), getDex(ca)]);
+  const mint = mintR.status === "fulfilled" ? mintR.value : null;
+
+  let conc = null, concNd = true;
+  if (mint) {
+    try { conc = await getConcentration(ca, mint.supply); concNd = conc == null; }
+    catch (e) { concNd = true; }
+  }
+
+  const dex = dexR.status === "fulfilled" ? dexR.value : null;
+
+  // ---- señales ----
+  const rows = [];
+  const kill = [], caution = [];
+
+  // 1 mint authority
+  if (!mint) { rows.push(["Mint authority", tag("nd", "n/d")]); }
+  else if (mint.mintAuthority) { rows.push(["Mint authority", tag("bad", "ACTIVA — pueden imprimir supply")]); kill.push("mint authority activa"); }
+  else { rows.push(["Mint authority", tag("ok", "revocada")]); }
+
+  // 2 freeze authority
+  if (!mint) { rows.push(["Freeze authority", tag("nd", "n/d")]); }
+  else if (mint.freezeAuthority) { rows.push(["Freeze authority", tag("bad", "ACTIVA — pueden congelar tu balance")]); kill.push("freeze authority activa"); }
+  else { rows.push(["Freeze authority", tag("ok", "revocada")]); }
+
+  // 3 liquidez
+  if (!dex) { rows.push(["Liquidez (DexScreener)", tag("nd", "n/d")]); }
+  else if (!dex.found) { rows.push(["Liquidez (DexScreener)", tag("bad", "sin par listado")]); kill.push("sin liquidez listada"); }
+  else {
+    let ageTxt = "", ageH = null;
+    if (dex.createdAt) { ageH = (Date.now() - dex.createdAt) / 3.6e6; ageTxt = " · par de " + (ageH < 48 ? Math.round(ageH) + "h" : Math.round(ageH / 24) + "d"); }
+    if (dex.liqUsd == null) rows.push(["Liquidez (DexScreener)", tag("nd", "n/d") + ageTxt]);
+    else if (dex.liqUsd < 1000) { rows.push(["Liquidez (DexScreener)", tag("bad", fmtUsd(dex.liqUsd)) + ageTxt]); kill.push("liquidez < $1k"); }
+    else if (dex.liqUsd < 10000) { rows.push(["Liquidez (DexScreener)", tag("warn", fmtUsd(dex.liqUsd)) + ageTxt]); caution.push("liquidez baja ($1k–$10k)"); }
+    else rows.push(["Liquidez (DexScreener)", tag("ok", fmtUsd(dex.liqUsd)) + " en " + dex.dexId + ageTxt]);
+    if (ageH != null && ageH < 24) caution.push("par con menos de 24h");
+  }
+
+  // 4 concentración
+  if (concNd) { rows.push(["Top-10 holders", tag("nd", "n/d")]); }
+  else {
+    const pct = conc.toFixed(1) + "%";
+    if (conc > 25) { rows.push(["Top-10 holders", tag("warn", pct) + " <small style='color:#6e7681'>incluye pools/LP si los hay</small>"]); caution.push("top-10 holders > 25%"); }
+    else rows.push(["Top-10 holders", tag("ok", pct) + " <small style='color:#6e7681'>incluye pools/LP si los hay</small>"]);
+  }
+
+  // 5 bundle/snipers — sin fuente
+  rows.push(["Bundle / snipers", tag("nd", "n/d — sin fuente pública gratuita")]);
+
+  // dato clave faltante = señales 1-3 (mint/freeze/liquidez). Holders (4) y bundle (5) son best-effort.
+  const missingKey = !mint || !dex || (dex.found === true && dex.liqUsd == null);
+
+  // ---- veredicto ----
+  let v, phrase;
+  if (kill.length) { v = "KILL"; phrase = "No lo toques. " + kill.join("; ") + "."; }
+  else if (caution.length || missingKey) {
+    v = "CAUTION";
+    const parts = caution.slice();
+    if (missingKey) parts.push("faltan datos clave (n/d)");
+    phrase = "Cuidado. " + parts.join("; ") + ".";
+  } else { v = "PASS"; phrase = "Sin señales rojas en lo básico. No es consejo de inversión."; }
+
+  let html = `<div class="verdict v-${v}">${v}<small>${phrase}</small></div><table>`;
+  for (const [k, val] of rows) html += `<tr><td>${k}</td><td>${val}</td></tr>`;
+  html += `</table>`;
+  $("#out").innerHTML = html;
+
+  lastText = `SafeCheck — ${ca}\nVeredicto: ${v} — ${phrase}\n` +
+    rows.map(([k, val]) => "- " + k + ": " + val.replace(/<[^>]+>/g, "").trim()).join("\n") +
+    `\n${location.origin}${location.pathname}?ca=${ca}`;
+
+  $("#copybar").style.display = "flex";
+  $("#go").disabled = false;
+}
+
+function flashCopied() { const c = $("#copied"); c.style.display = "inline"; setTimeout(() => c.style.display = "none", 1500); }
+
+$("#go").addEventListener("click", () => analyze($("#ca").value));
+$("#ca").addEventListener("keydown", e => { if (e.key === "Enter") analyze($("#ca").value); });
+document.querySelectorAll(".examples a").forEach(a =>
+  a.addEventListener("click", () => { $("#ca").value = a.dataset.ca; analyze(a.dataset.ca); }));
+$("#copy").addEventListener("click", () => { navigator.clipboard.writeText(lastText).then(flashCopied); });
+$("#share").addEventListener("click", () => {
+  navigator.clipboard.writeText(`${location.origin}${location.pathname}?ca=${lastCa}`).then(flashCopied);
+});
+
+const q = new URLSearchParams(location.search).get("ca");
+if (q) { $("#ca").value = q; analyze(q); }
+</script>
+</body>
+</html>
