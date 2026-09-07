@@ -31,14 +31,13 @@
 - [ ] Revisar `data/bounties.jsonl`: quitar lo vencido, marcar lo que vence <72h.
 - [ ] (Opcional) Buscar fuente gratuita browser-CORS para "top holders". Si no hay → queda n/d. NO pedir ni hardcodear API keys.
 
-## Rutina diaria — /schedule (NO disparado; el usuario decide)
-Cron disponible en este plan (verificado con CronList). Para automatizar la corrida diaria, el usuario puede correr:
-
-```
-/schedule cada día a las 09:00 America/Santiago: abre la carpeta zero-to-10k y ejecuta la skill daily-loop (comando DAILY). Sin subagentes. Chrome solo en el hilo padre y solo si un dato lo exige. No publicar en X. Commit local al final; push solo si el repo es público.
-```
-
-O el equivalente con la skill `schedule`. **No lo lancé** — dejarlo a criterio del usuario.
+## Rutina diaria — /schedule (CREADA 2026-09-06)
+- Routine cloud: **"zero-to-10k daily-auto (HUNT + briefing)"** · id `trig_01EFCGHwx3wAj8wtPMJv1xih`
+- Cron `0 12 * * *` UTC = **09:00 America/Santiago**. Próxima corrida: 2026-09-07 ~09:02.
+- Panel: https://claude.ai/code/routines/trig_01EFCGHwx3wAj8wtPMJv1xih
+- **Qué hace (nube, sin Chrome/X):** HUNT vía API pública de Superteam Earn → actualiza `data/bounties.jsonl` (cierra vencidos, agrega abiertos), escribe `BRIEFING/<hoy>.md` con top-3 bounties + pendientes para la sesión local, ajusta NEXT_ACTIONS si algo venció, commit + push a master.
+- **Qué NO hace (queda para la sesión local interactiva):** leer X, build de SafeCheck, publicar drafts, enviar la submission del IDEATHON, cualquier cosa con Chrome/wallet.
+- Para pausar/editar/borrar: el panel de arriba o pedirlo en sesión.
 
 ## Revisar
 - [ ] Kill-check 2026-09-13: ¿demo pública live + submission IDEATHON enviada?
