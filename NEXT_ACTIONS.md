@@ -1,29 +1,46 @@
 # NEXT ACTIONS
 
-## Hechas
-- [x] Setup + repo GitHub
-- [x] Chrome/MCP desbloqueado en hilo padre
+## Hechas (2026-09-06)
+- [x] Setup + repo GitHub + Chrome desbloqueado en hilo padre
 - [x] Primera lectura de X → x-feed.jsonl, ideas.jsonl
-- [x] Apuesta activa (I001) + 2 spikes definidos
-- [x] Draft de arranque en drafts/
-- [x] experiments/001-solana-safecheck/README.md (hipótesis, APIs, kill)
-- [x] index.html FUNCIONAL: mint/freeze authority (RPC publicnode) + liquidez (DexScreener) reales; n/d honesto para holders/bundle; probado BONK/USDC
-- [x] HUNT: TxODDS $50k descartado (cerró jul 2026); 7 bounties abiertos → data/bounties.jsonl
+- [x] Apuesta activa I001 + 2 spikes
+- [x] I001 SafeCheck v0 funcional (mint/freeze authority + liquidez reales; holders/bundle n/d honesto); probado BONK/USDC
+- [x] HUNT: TxODDS descartado; 7 bounties abiertos → data/bounties.jsonl
+- [x] INFRA BLITZ: CLAUDE.md (constitución MAIN), MAP.md, ecosystem/{spark-rhc,robinhood-chain,venture-lab,x-account}.md
+- [x] .claude/skills/{daily-loop,ingest-x,publish,hunt}
+- [x] experiments/002-spark-rhc-watch/ (README + tracker read-only)
+- [x] content/{calendar.md,queue.jsonl} + 5 drafts en content/drafts/
+- [x] SafeCheck: og:tags + meta description + canonical + favicon + copy ES pulida + index.html redirect en raíz del repo
 
-## Próxima corrida (BUILD)
-- [ ] Deploy público del tool: GitHub Pages del repo (o Netlify drop). Requiere que el repo sea público o Pages desde repo privado (plan). Confirmar con el usuario si el repo pasa a público.
-- [ ] Pulir copy ES del veredicto y de cada señal (que un no-técnico lo entienda)
-- [ ] Añadir og:tags + título para que el link compartible se vea bien al pegarlo
-- [ ] Revisar si hay alguna fuente gratuita browser-CORS para "top holders" (Helius free tier con key propia del usuario? preguntar). Si no, dejar n/d.
+## HAZLO TÚ EN GITHUB (a mano, ~5 clicks)
+**A. Repo público** — ✅ YA ESTÁ (verificado con `gh`: visibility = PUBLIC). Nada que hacer.
 
-## Spike dealflow (I002)
-- [ ] Preparar submission a **Superteam Ukraine IDEATHON** (1000 USDG, due 2026-09-15): descripción de SafeCheck como idea + link a la demo
-- [ ] Revisar elegibilidad por chapter (Chile no tiene chapter propio en varios; muchos bounties son globales — confirmar en cada uno)
-- [ ] Evaluar Manic Trade bug bounty (1000 USDC, due 2026-09-09) SOLO si no exige conectar wallet ni fondos
+**B. GitHub Pages** (esto sí falta)
+1. github.com/Keziaasdf/zero-to-10k → **Settings**
+2. Menú izq → **Pages**
+3. **Source**: "Deploy from a branch"
+4. **Branch**: `main` · carpeta `/ (root)` · **Save**
+5. Esperá ~1 min y abrí: `https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/`
+   (y `https://keziaasdf.github.io/zero-to-10k/` que redirige ahí).
 
-## Spike content (I003)
-- [ ] Actualizar drafts/ con progreso real del build (no publicar sin "PUBLICA AHORA")
+> El repo NO contiene llaves, seeds ni direcciones de wallet: docs + una página estática read-only. Ya es público y open-source por diseño.
+
+## Próxima corrida (BUILD / cuando Pages esté live)
+- [ ] Verificar la URL de Pages y pegarla en: SafeCheck README, drafts de content (reemplazar `<URL>`), submission IDEATHON.
+- [ ] Enviar submission al **Superteam Ukraine IDEATHON** (formulario en Superteam Earn) — antes del **2026-09-15**. Revisar si el bounty es global o chapter-only.
+- [ ] Revisar `data/bounties.jsonl`: quitar lo vencido, marcar lo que vence <72h.
+- [ ] (Opcional) Buscar fuente gratuita browser-CORS para "top holders". Si no hay → queda n/d. NO pedir ni hardcodear API keys.
+
+## Rutina diaria — /schedule (NO disparado; el usuario decide)
+Cron disponible en este plan (verificado con CronList). Para automatizar la corrida diaria, el usuario puede correr:
+
+```
+/schedule cada día a las 09:00 America/Santiago: abre la carpeta zero-to-10k y ejecuta la skill daily-loop (comando DAILY). Sin subagentes. Chrome solo en el hilo padre y solo si un dato lo exige. No publicar en X. Commit local al final; push solo si el repo es público.
+```
+
+O el equivalente con la skill `schedule`. **No lo lancé** — dejarlo a criterio del usuario.
 
 ## Revisar
-- [ ] Kill-check 2026-09-13: ¿demo pública live + submission IDEATHON enviada? Si no → re-evaluar apuesta
-- [ ] Watch blog.colosseum.com: anuncio del próximo hackathon Colosseum
+- [ ] Kill-check 2026-09-13: ¿demo pública live + submission IDEATHON enviada?
+- [ ] Watch blog.colosseum.com: próximo hackathon Colosseum
+- [ ] experiments/002: revisión de oficio 2026-11-01

@@ -3,7 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Solana SafeCheck</title>
+<title>Solana SafeCheck — chequeo de riesgo de un token, en español</title>
+<meta name="description" content="Pegá el contract address de un token de Solana y mirá 5 señales de riesgo con un veredicto PASS / CAUTION / KILL. Sin conectar wallet, sin firmar nada, open source.">
+<link rel="canonical" href="https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Solana SafeCheck">
+<meta property="og:title" content="Solana SafeCheck — chequeo de riesgo de un token, en español">
+<meta property="og:description" content="Pegá un contract address y mirá 5 señales de riesgo + veredicto PASS / CAUTION / KILL. Sin wallet, sin firmar, open source.">
+<meta property="og:url" content="https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Solana SafeCheck">
+<meta name="twitter:description" content="CA → 5 señales de riesgo → PASS / CAUTION / KILL, en español. Sin wallet, sin firmar, open source.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='13' font-size='13'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
@@ -28,6 +39,8 @@
   button:disabled { opacity: .5; cursor: default; }
   .examples { font-size: 12px; color: #8b949e; margin: 8px 0 0; }
   .examples a { color: #58a6ff; cursor: pointer; text-decoration: underline; }
+  .legend { font-size: 12px; color: #8b949e; margin: 12px 0 0; line-height: 1.7; }
+  .legend b { font-weight: 700; }
   .verdict {
     margin: 24px 0 4px; padding: 16px; border-radius: 10px; font-weight: 700; font-size: 18px;
     border: 1px solid #30363d;
@@ -53,12 +66,15 @@
 </head>
 <body>
   <h1>Solana SafeCheck</h1>
-  <p class="sub">Pegá un contract address. 5 señales básicas de riesgo + veredicto. Sin wallet, sin firmar nada, sin login.</p>
+  <p class="sub">Pegá el contract address de un token de Solana y mirá 5 señales de riesgo antes de tocarlo. Sin conectar wallet, sin firmar nada, sin login.</p>
 
   <div class="row-input">
-    <input id="ca" placeholder="Contract address del token (mint)" autocomplete="off" spellcheck="false">
+    <input id="ca" placeholder="Contract address del token (el mint)" autocomplete="off" spellcheck="false">
     <button id="go">Analizar</button>
   </div>
+  <p class="legend"><b class="tag bad">KILL</b> señal de peligro clara, no entres ·
+    <b class="tag warn">CAUTION</b> algo no cierra o faltan datos ·
+    <b class="tag ok">PASS</b> sin banderas rojas en lo básico (no es luz verde para comprar)</p>
   <p class="examples">Ejemplos:
     <a data-ca="DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263">BONK</a> ·
     <a data-ca="EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v">USDC</a>
@@ -211,13 +227,13 @@ async function analyze(ca) {
 
   // ---- veredicto ----
   let v, phrase;
-  if (kill.length) { v = "KILL"; phrase = "No lo toques. " + kill.join("; ") + "."; }
+  if (kill.length) { v = "KILL"; phrase = "No entres: " + kill.join("; ") + "."; }
   else if (caution.length || missingKey) {
     v = "CAUTION";
     const parts = caution.slice();
-    if (missingKey) parts.push("faltan datos clave (n/d)");
-    phrase = "Cuidado. " + parts.join("; ") + ".";
-  } else { v = "PASS"; phrase = "Sin señales rojas en lo básico. No es consejo de inversión."; }
+    if (missingKey) parts.push("no se pudo leer alguna señal clave (n/d)");
+    phrase = "Revisá bien antes de entrar: " + parts.join("; ") + ".";
+  } else { v = "PASS"; phrase = "Sin banderas rojas en lo básico. Esto no es luz verde ni consejo de inversión."; }
 
   let html = `<div class="verdict v-${v}">${v}<small>${phrase}</small></div><table>`;
   for (const [k, val] of rows) html += `<tr><td>${k}</td><td>${val}</td></tr>`;
