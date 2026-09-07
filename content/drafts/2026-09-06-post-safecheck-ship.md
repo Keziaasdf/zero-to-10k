@@ -1,6 +1,8 @@
 # DRAFT — post: SafeCheck v0
-Estado: NO PUBLICAR. Publicar solo con "PUBLICA AHORA". Requiere URL de Pages viva + verificar que BONK/USDC sigan dando PASS/KILL.
+Estado: NO PUBLICAR. Publicar solo con "PUBLICA AHORA". Antes de publicar: verificar que BONK→PASS / USDC→KILL sigan dando bien en la demo.
 Tema: ship del primer artefacto de I001.
+Demo: https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/
+Repo: https://github.com/Keziaasdf/zero-to-10k
 
 ---
 
@@ -19,7 +21,7 @@ Link abajo. Pegale un CA y probá.
 
 ## Versión corta (reply/quote)
 
-v0 lista: CA → 5 señales → PASS/CAUTION/KILL, en español, sin wallet, open source. <URL>
+v0 lista: CA → 5 señales → PASS/CAUTION/KILL, en español, sin wallet, open source. https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/
 
 ## Versión hilo (4)
 
@@ -29,4 +31,4 @@ v0 lista: CA → 5 señales → PASS/CAUTION/KILL, en español, sin wallet, open
 
 3/ Qué NO hace: no conecta tu wallet, no firma nada, no ejecuta trades, no te dice qué comprar. Si un dato no sale de una fuente pública, dice "n/d" — no lo inventa.
 
-4/ Es estático y open source. Link con `?ca=` para pegar en un grupo: el que lo abre ve el análisis solo. Probala y decime qué le falta. <URL>
+4/ Es estático y open source. Link con `?ca=` para pegar en un grupo: el que lo abre ve el análisis solo. Probala y decime qué le falta. https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/

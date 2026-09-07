@@ -14,7 +14,7 @@
 **I001 — Solana SafeCheck.** Página estática: CA → 5 señales → veredicto PASS/CAUTION/KILL, copy ES + link compartible. Sin wallet, sin firmar, sin backend de pago, sin login. Score 72.
 - v0 FUNCIONAL en `experiments/001-solana-safecheck/`. Señales 1-2 (mint/freeze authority, RPC publicnode) + 3 (liquidez, DexScreener) con datos reales. 4-5 (holders, bundle) = `n/d` honesto (sin fuente gratuita browser-CORS). Probado BONK (PASS) / USDC (KILL).
 - 2026-09-06: og:tags + copy pulida + `index.html` redirect en raíz para Pages.
-- Falta: repo público + Pages live → URL prevista `https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/`.
+- Pages LIVE (verificado 2026-09-06): `https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/` (BONK→PASS desde github.io). Raíz redirige.
 
 ## Spike 1 — HUNT (bounties ABIERTOS)
 - `data/bounties.jsonl`. Top encaje: **Superteam Ukraine IDEATHON** — 1000 USDG — **due 2026-09-15** (submission borrador en `content/drafts/2026-09-06-ideathon-submission.md`).

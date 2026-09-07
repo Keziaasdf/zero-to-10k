@@ -25,9 +25,9 @@
 
 > El repo NO contiene llaves, seeds ni direcciones de wallet: docs + una página estática read-only. Ya es público y open-source por diseño.
 
-## Próxima corrida (BUILD / cuando Pages esté live)
-- [ ] Verificar la URL de Pages y pegarla en: SafeCheck README, drafts de content (reemplazar `<URL>`), submission IDEATHON.
-- [ ] Enviar submission al **Superteam Ukraine IDEATHON** (formulario en Superteam Earn) — antes del **2026-09-15**. Revisar si el bounty es global o chapter-only.
+## Próxima corrida (BUILD)
+- [x] Pages live + URL canónica pegada en README, drafts y submission (2026-09-06).
+- [ ] Enviar submission al **Superteam Ukraine IDEATHON** — copiar el bloque entre marcadores de `content/drafts/2026-09-06-ideathon-submission.md` al formulario de Superteam Earn. Antes del **2026-09-15**. PRIMERO revisar si el bounty es global o Ukraine-only.
 - [ ] Revisar `data/bounties.jsonl`: quitar lo vencido, marcar lo que vence <72h.
 - [ ] (Opcional) Buscar fuente gratuita browser-CORS para "top holders". Si no hay → queda n/d. NO pedir ni hardcodear API keys.
 

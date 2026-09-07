@@ -16,11 +16,12 @@ El problema: cada launch nuevo es un campo minado. Mint authority viva, LP sin q
 Ya hay checkers, pero o son pesados o esconden lo que importa detrás de un login.
 
 3/
-Lo que voy a shippear esta semana:
+La v0 ya está live:
 - página estática, sin backend propio
 - pegás un contract address
 - te devuelve las 5 señales de riesgo que de verdad importan, sin ruido
 - open source desde el commit 1
+https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/
 
 4/
 Lo que NO va a hacer:
@@ -35,7 +36,7 @@ Todo el trabajo y las decisiones quedan en un repo público. Los errores tambié
 
 6/
 Si armás bots o tools sobre Solana y querés que revise algo, respondé acá.
-Update con el primer release en unos días.
+Próximo update: la señal de holders y feedback de lo que rompa.
 
 ---
 
@@ -43,10 +44,11 @@ Update con el primer release en unos días.
 
 Construyo en público: tool read-only para chequear el riesgo de un launch en Solana antes de tocarlo.
 Sin conectar wallet, sin firmar nada, open source, costo 0.
-Primer release esta semana. 0→10k, día 1.
+v0 ya live: https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/
+0→10k, día 1.
 
 ---
 
 ## Versión corta (para reply/quote)
 
-Read-only safety-check para launches de Solana. Pegás el CA, ves las 5 señales que importan. Sin wallet, sin txs, open source. Shippeo esta semana.
+Read-only safety-check para launches de Solana. Pegás el CA, ves las 5 señales que importan. Sin wallet, sin txs, open source. https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/

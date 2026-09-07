@@ -54,11 +54,13 @@ Esto NO compite en features con RugCheck/GMGN. Diferencial:
 Al 2026-09-13, si NO hay (a) `index.html` funcional con ≥1 llamada real resolviendo,
 o (b) ≥1 bounty abierto concreto donde este entregable encaje → se mata I001 y se re-elige apuesta.
 
-## Deploy (GitHub Pages)
-- URL prevista: **https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/**
-- También `https://keziaasdf.github.io/zero-to-10k/` → el `index.html` de la raíz del repo redirige acá.
-- Requiere: repo **público** + Pages activado (Settings → Pages → Source: Deploy from a branch → Branch: `main` → `/ (root)` → Save). GitHub Pages solo sirve desde `/root` o `/docs`; por eso el redirect en la raíz en vez de mover el site.
+## Deploy (GitHub Pages) — LIVE
+- URL canónica: **https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/**
+- `https://keziaasdf.github.io/zero-to-10k/` → el `index.html` de la raíz del repo redirige acá.
+- Verificado 2026-09-06: BONK → PASS, RPC publicnode + DexScreener resuelven desde el origen `github.io`.
+- Pages sirve desde `main` `/ (root)`; por eso el redirect en la raíz en vez de mover el site.
 
 ## Estado
 - 2026-09-06: README + `index.html` funcional. Señales 1-2 (mint/freeze authority) vía `solana-rpc.publicnode.com` + señal 3 (liquidez/edad par) vía DexScreener resuelven con datos reales. Señales 4-5 → `n/d` honesto. Probado en Chrome: BONK → PASS, USDC → KILL.
 - 2026-09-06 (infra blitz): og:tags + `<meta description>` + canonical + favicon; copy ES pulida (leyenda PASS/CAUTION/KILL, frases de veredicto en lenguaje llano); `index.html` redirect en la raíz del repo para Pages.
+- 2026-09-06 (quota sprint): URL canónica de Pages en README/drafts/submission; social card `og.png` (1200×630, generada por `make-og.py`) + `og:image` / `twitter:image` + `twitter:card=summary_large_image` para que el link no se vea vacío en X.
