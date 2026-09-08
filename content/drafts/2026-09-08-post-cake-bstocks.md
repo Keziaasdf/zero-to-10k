@@ -3,24 +3,25 @@ Estado: NO PUBLICAR. Publicar solo con "PUBLICA AHORA".
 Pilar: P3 señal de ecosistema.
 IDIOMA: inglés. Disclosure: holder de $CAKE, explícito en el post.
 
-Datos (research 2026-09-08 — refrescar precio de $CAKE en DexScreener/CoinGecko antes de publicar):
-- PancakeSwap cruzó **$1B de volumen acumulado en activos tokenizados**; sumó **10 bStocks nuevos** (ASML, Netflix, Super Micro, IREN, Coherent, Credo, Astera Labs, AST SpaceMobile, Bitmine, USA Rare Earth), BEP-20 respaldados 1:1 con acción real en custodio regulado.
-- Es el venue con mayor share de bStocks en BNB Chain.
-- $CAKE ~$2.27, +3.6% en el rebote de alts (visto en chart de @cryptojack4u). NO citar precio sin refrescar.
-- $CAKE cashtag en X: verificar que enrute a PancakeSwap y no a otro token antes de usarlo; si dudás, pegá el contract.
+Datos (research 2026-09-08, refrescado antes de publicar):
+- $CAKE precio **$2.27**, +2.4–2.8% 24h (DexScreener, par CAKE/WBNB PancakeSwap v2, ~$20M liq).
+- PancakeSwap v3 = top DEX de stock-tokens, **~$3B de volumen en 2026** (cryptobriefing). BNB Chain acumulado en stock-tokens **>$5B**.
+- bStocks: cruzó **$500M AUM el 2026-07-28** (lanzó mid-junio con $5.6M). Volumen diario reciente ~$676M.
+- Sumó **10 bStocks nuevos** (ASML, Netflix, Super Micro, IREN, Coherent, Credo, Astera Labs, AST SpaceMobile, Bitmine, USA Rare Earth), BEP-20 respaldados 1:1 con acción real en custodio regulado.
+- $CAKE cashtag en X enruta bien a PancakeSwap (token dominante) — OK usarlo.
 
 ---
 
-## Single post
+## Single post — PUBLICADO EN
 
 Holder of $CAKE, bias stated.
 
-PancakeSwap just crossed $1B in cumulative tokenized-asset volume and added 10 new bStocks (ASML, Netflix, IREN, Super Micro...). It's now the #1 venue for stock-tokens on BNB Chain.
+PancakeSwap v3 is now the top DEX for tokenized stocks — around $3B in volume this year. bStocks crossed $500M in AUM (it launched mid-June at $5.6M) and just added 10 more names: ASML, Netflix, IREN, Super Micro, Coherent, Credo...
 
-Before trusting the number, three things I check on any onchain stock-token:
-- backing: is there a real 1:1 share at a regulated custodian, or is it synthetic?
+Before trusting any of that, three things I check on an onchain stock-token:
+- backing: a real 1:1 share at a regulated custodian, or synthetic?
 - pair counterparty: a liquid stablecoin, or the ecosystem's own token?
-- controls: who can pause, mint or freeze the token?
+- controls: who can pause, mint or freeze it?
 
 Volume is the easy part to show. The rest is what lets you get out.
 
