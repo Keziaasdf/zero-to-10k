@@ -6,10 +6,10 @@ holdings o narrativas, no cada día.
 ## Holdings (holder declarado — seguir de cerca, NUNCA shill)
 - **$NPC** — holder. Narrativa meme / "normie". Trackear precio, volumen, catalizadores, de qué chain habla el timeline.
 - **$CAKE** — holder. PancakeSwap. Ángulo vivo: bStocks / tokenized stocks (NVDA/SPY/TSLA/GME), ~$75M/24h, "venue #1 onchain". $CAKE = infra, no meme.
-- **$SPARK** — holder. **Ambiguo, confirmar con el usuario de qué token exacto habla.**
-  - NO es `$SPK` de Spark Protocol → ese airdrop está **CERRADO** (claim venció 2025-12-17). Cero "airdrop vivo" en drafts.
-  - Sí conecta con **vibe/vibe** (`@usespark_` / usespark.fun), launchpad Seedify sobre Robinhood Chain. Ver `ecosystem/spark-rhc.md`.
-  - Regla: hasta confirmar ticker/contrato, tratar $SPARK como "ecosistema Spark/vibe", no como token con número de mercado citado.
+- **$SPARK** — holder. Token del **ecosistema vibe/vibe** (Seedify sobre Robinhood Chain), narrativa liderada por **@meta_alchemist**. Ver `ecosystem/spark-rhc.md`.
+  - NO es `$SPK` de Spark Protocol (Base/Ethereum, MakerDAO/Sky) → ese airdrop está **CERRADO** (claim venció 2025-12-17). Nunca cruzar los dos.
+  - $SPARK = "tech token" del stack Seedify; el reward "confirmado" es el 5% del **nuevo $SFUND** a testnet users + creators (Season 0, ETA ~sept 2026, dicho por @meta_alchemist, sin contrato). NFTs "Vibe Vibers": 200k $SPARK = 1 NFT.
+  - Regla: números de mercado de $SPARK solo con fuente viva. "ETA septiembre" no es fecha firme. Cero conexión de wallet a sitios de claim.
 
 ## Narrativas que rinden (temas de research + drafts)
 1. **Solana memecoins / trenches / seguridad de launches** — ata directo a I001 SafeCheck (mint/freeze authority, liquidez, bundle, holders).

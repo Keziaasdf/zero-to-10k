@@ -37,12 +37,13 @@
   - Para borrarla del todo (opcional): https://claude.ai/code/routines → eliminar. Desactivada ya no gasta corridas.
 - **HUNT ahora vive 100% local**, como paso 5 de la skill `daily-loop` (curl a la API de Superteam desde esta máquina, que sí tiene salida). El briefing también se escribe en la sesión local.
 
-## Motor X `x-growth` (montado 2026-09-08)
-- [ ] **Sesión local:** correr `X GROWTH` una vez para capturar **baseline** en `data/x-metrics.jsonl` (seguidores, siguiendo, impresiones_30d si carga analytics). Sin baseline no se mide crecimiento.
-- [ ] Confirmar con el usuario a qué token se refiere **$SPARK** (¿Spark Protocol `$SPK` — airdrop cerrado —, un token nuevo, o "ecosistema vibe/vibe"?). Ajustar `content/x/INTERESES.md`.
-- [ ] Elegir cómo loopea: `/loop x-growth` en sesión con Chrome, o sumar `x-growth` como paso 4.5 de `daily-loop`. (Cloud descartado: la routine cloud está desactivada y el entorno no tiene Chrome logueado ni salida a las APIs que hacen falta.)
-- [ ] Revisar drafts nuevos: `2026-09-08-post-cake-bstocks` (verificar números en DexScreener), `2026-09-08-post-rhc-claim-scam`.
-- Publicar cualquiera de ellos: el usuario escribe `PUBLICA AHORA` + cuál.
+## Motor X `x-growth` (montado 2026-09-08 · loop /loop 4h activo)
+- [x] Baseline capturado (2026-09-08): 406 seguidores / 1118 siguiendo / impresiones 4W 854 (cayendo desde pico Aug 30). En `data/x-metrics.jsonl`.
+- [x] $SPARK confirmado = token del ecosistema **vibe/vibe** (Seedify, narrativa de @meta_alchemist). NO es $SPK. `content/x/INTERESES.md` actualizado.
+- [x] Loop: `/loop 4h x-growth` en esta sesión local. Chrome máx 2×/día (baseline + 1 refresco); las demás corridas = research only.
+- [ ] Recapturar métricas de perfil cada ~5–7 días → nueva línea en `x-metrics.jsonl` (comparar Δ alcance).
+- [ ] Drafts en cola (`content/calendar.md` #7–9): `cake-bstocks` (refrescar precio $CAKE antes de publicar), `rhc-claim-scam`, `spark-vibe-season0`.
+- Publicar cualquiera: el usuario escribe `PUBLICA AHORA` + cuál.
 
 ## Revisar
 - [ ] Kill-check 2026-09-13: ¿demo pública live + submission IDEATHON enviada?

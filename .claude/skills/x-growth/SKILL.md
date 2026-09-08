@@ -14,6 +14,13 @@ Nada se publica sin que el usuario escriba exactamente `PUBLICA AHORA`.
 - `content/x/metricas.md` — esquema de los 3 archivos de datos y KPIs.
 - `ecosystem/x-account.md` — voz y reglas. `data/x-feed.jsonl` — señales previas.
 
+## Cadencia (loop varias veces al día)
+Cada corrida decide su modo por el último timestamp de `data/x-metrics.jsonl` / `data/x-engage.jsonl`:
+- **Modo LOCAL completo (con Chrome):** solo si la última pasada de Chrome fue hace **> 5 h** y estás en sesión interactiva. Máx **2 pasadas de Chrome al día** (X se navega a ritmo humano — nunca automatizar).
+- **Modo RESEARCH (sin Chrome):** todas las demás corridas. Research + refrescar/añadir drafts. Barato y seguro, se puede repetir cada 3–4 h.
+- Si en 24 h no hubo ninguna pasada de Chrome → la próxima corrida interactiva fuerza modo LOCAL para no perder el baseline/métricas.
+- Rate limit / captcha en X → cerrar tab, marcar en la salida, seguir en modo RESEARCH el resto del día.
+
 ## Dos lanes
 
 ### Lane LOCAL (sesión interactiva, Chrome en hilo padre) — corrida completa
@@ -47,6 +54,8 @@ Nada se publica sin que el usuario escriba exactamente `PUBLICA AHORA`.
 - Meter programas/airdrops cerrados como premio vivo (SPK claim está cerrado).
 
 ## Loop
-- Local a diario: `/loop x-growth` (o incluirlo como paso 4.5 de `daily-loop`).
-- Cloud (solo Lane RESEARCH, sin métricas): ver `NEXT_ACTIONS.md` §rutina — se puede sumar
-  research + drafts a la routine diaria existente. La captura de alcance queda para la sesión local.
+- **Varias veces al día:** `/loop 4h x-growth` en una sesión local con Chrome logueado.
+  La primera corrida hace el baseline (modo LOCAL); las siguientes alternan según la cadencia de arriba
+  (Chrome máx 2×/día, research el resto).
+- Alternativa: sumar `x-growth` como paso 4.5 de `daily-loop`.
+- Cloud: descartado — la routine cloud está desactivada y el entorno no tiene Chrome logueado.
