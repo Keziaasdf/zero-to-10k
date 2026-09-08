@@ -34,6 +34,7 @@ No chatbot, no ensayos. Ciclos cortos: leer → actuar → actualizar archivo �
 ## Hechos fijos del ecosistema (corregir solo con fuente en vivo)
 - **Spark Protocol `$SPK`**: airdrop **CERRADO** (claim hasta 2025-12-17). Cero hunt de claim SPK.
 - **Spark en Robinhood Chain** = launchpad / hook de Uniswap v4, `@usespark_` / usespark.fun. Se trackea como **experimento de ecosistema + contenido**, NO como "airdrop confirmado".
+- **Token `$SPARK` del ecosistema vibe (holding del usuario)**: contract `0x0FB07c88Bc6d195c196279523957C004eb868248` en **Base**. NO es `$SPK`. El cashtag `$SPARK` en X lleva a `$SPK` → en posts pegar contract o dexscreener. Posts de X siempre en **inglés**.
 - **Robinhood Chain**: mainnet chainId **4663**, testnet **46630**, gas en **ETH**. **No hay token ni airdrop oficial de la chain anunciado.** Cualquier "claim site" de RHC = **scam**.
 - Seedify `vibe/vibe` Season 0 (testnet): 5% del **nuevo $SFUND** prometido a testnet users + token creators, ETA ~sept 2026. Es lo único "confirmado" y vive en `../spark-testnet/`.
 

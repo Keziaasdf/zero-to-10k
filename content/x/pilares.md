@@ -11,10 +11,11 @@ dealflow. Cada draft cae en 1 pilar. Mezclar pilares en la semana, no repetir el
 | **P4 Curación / take corto** | Reacción a algo que el usuario likeó/guardó (`x-engage.jsonl`). 1-2 frases + por qué importa. | quote / reply propio | Cadencia diaria barata, señal de que estás en la conversación | relleno diario |
 
 ## Reglas de voz (de `ecosystem/x-account.md` + `../robinhood-chain/content-ops/VOICE-GUIDE.md`)
-- Español. Directo, sin hype, sin promesa de retorno. Listas > párrafos.
-- Nunca "consejo de inversión". Nunca shill de holdings.
+- **INGLÉS siempre** (decisión 2026-09-08). Directo, sin hype, sin promesa de retorno. Listas > párrafos.
+- Nunca "consejo de inversión" / "not financial advice" como excusa. Nunca shill de holdings.
 - Números de mercado: verificados en fuente viva (DexScreener) antes de dejarlos en el draft.
 - Sin política, sin Chile.
+- Al mencionar SPARK: pegar el contract `0x0FB07c88Bc6d195c196279523957C004eb868248` (Base) o el link de dexscreener — el cashtag `$SPARK` enruta mal en X.
 
 ## Criterio de "listo para publicar"
 Un draft pasa a `estado:"listo"` cuando: cae en 1 pilar, voz OK, números verificados o marcados `n/d`,

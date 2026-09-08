@@ -31,8 +31,10 @@
 
 ## Voz
 - Referencia: `../robinhood-chain/content-ops/VOICE-GUIDE.md`.
-- Directo, sin hype, sin promesas de retorno. Español. Listas > párrafos.
+- **Posts en INGLÉS siempre** (decisión del usuario 2026-09-08). Notas internas en español.
+- Directo, sin hype, sin promesas de retorno. Listas > párrafos.
 - Nunca "consejo de inversión". Nunca shill de token propio.
+- $SPARK (holding) = contract `0x0FB07c88Bc6d195c196279523957C004eb868248` en Base. El cashtag `$SPARK` en X lleva a otro token ($SPK Spark Protocol) → pegar contract / dexscreener, nunca solo el cashtag.
 
 ## Próxima acción
 - Cola de contenido en `content/queue.jsonl`, calendario en `content/calendar.md`.

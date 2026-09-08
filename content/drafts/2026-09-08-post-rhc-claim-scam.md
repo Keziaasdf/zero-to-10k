@@ -1,38 +1,38 @@
-# DRAFT — hilo: "Robinhood Chain no tiene token oficial"
+# DRAFT — thread: "Robinhood Chain has no official token"
 Estado: NO PUBLICAR. Publicar solo con "PUBLICA AHORA".
 Pilar: P2 explicador / anti-scam. Evergreen + defensivo.
-Tema / objetivo: cortar de raíz los "claim RHC" falsos. Checklist para no perder cuenta ni fondos. Cero links a claim sites, ni siquiera para "mostrar el malo".
+IDIOMA: inglés. Cero links a claim sites, ni para "mostrar el malo".
 Hechos fijos (CLAUDE.md): RHC mainnet chainId 4663, testnet 46630, gas en ETH. No hay token ni airdrop oficial de la chain anunciado. $SPK de Spark Protocol = airdrop CERRADO (claim venció 2025-12-17).
 
 ---
 
-## Versión hilo (5)
+## Thread (5)
 
-1/ Robinhood Chain no tiene token ni airdrop oficial anunciado. Si ves un sitio que te ofrece "claim RHC", es scam. Sin excepción, hoy.
+1/ Robinhood Chain has no official token and no official airdrop announced. If a site offers you a "claim RHC", it's a scam. No exceptions, as of today.
 
-2/ Datos reales de la chain: mainnet chainId 4663, testnet 46630, gas se paga en ETH. Eso es todo lo confirmado. Cualquier cosa que agregue "token nativo" o "snapshot" arriba de eso te está mintiendo.
+2/ The real chain facts: mainnet chainId 4663, testnet 46630, gas paid in ETH. That's all that's confirmed. Anything adding a "native token" or "snapshot" on top of that is lying to you.
 
-3/ Cómo opera el scam:
-- página con branding calcado
-- "conectá wallet para verificar elegibilidad"
-- la firma que te piden no es un login, es un permiso para mover tus tokens
+3/ How the scam runs:
+- page with copied branding
+- "connect wallet to check eligibility"
+- the signature they ask for isn't a login — it's permission to move your tokens
 
-4/ Checklist antes de firmar cualquier claim:
-- ¿el anuncio salió de la cuenta oficial del proyecto? (no de un quote, no de un reply)
-- ¿la firma dice qué hace en lenguaje claro, o es un blob?
-- ¿te apura? el apuro es la herramienta
-- ante la duda: no firmás y no perdés nada
+4/ Checklist before signing any claim:
+- did the announcement come from the project's official account? (not a quote, not a reply)
+- does the signature say what it does in plain language, or is it a blob?
+- is it rushing you? the rush is the tool
+- when in doubt: don't sign, and you lose nothing
 
-5/ Lo único "gratis" confirmado en ese ecosistema es la Season 0 de vibe/vibe en testnet (5% del nuevo $SFUND a testnet users + creadores, ETA ~sept 2026). Testnet. Sin conectar wallet a sitios raros.
+5/ The only confirmed "free" thing in that ecosystem is vibe/vibe Season 0 on testnet (5% of the new $SFUND to testnet users + creators, ETA ~Sept 2026, said not signed). Testnet. No connecting your wallet to random sites.
 
-## Versión post único
+## Single post
 
-Robinhood Chain no tiene token ni airdrop oficial. Todo "claim RHC" que veas hoy es scam.
+Robinhood Chain has no official token and no official airdrop. Every "claim RHC" you see today is a scam.
 
-La chain real es: mainnet 4663, testnet 46630, gas en ETH. Nada más.
+The real chain: mainnet 4663, testnet 46630, gas in ETH. Nothing else.
 
-El scam siempre te pide "conectar wallet para verificar" y una firma que no es login: es permiso para mover tus tokens. Si te apura, es scam. Si dudás, no firmás.
+The scam always asks you to "connect wallet to verify" and sign something that isn't a login — it's permission to move your tokens. If it rushes you, it's a scam. If you're unsure, don't sign.
 
-## Versión corta (reply/quote)
+## Short (reply/quote)
 
-No hay token ni airdrop oficial de Robinhood Chain. Cualquier "claim site" de RHC es scam: te piden una firma que no es login sino permiso para vaciar la wallet. Ante la duda, no firmás.
+No official token or airdrop for Robinhood Chain. Any RHC "claim site" is a scam: the signature they want isn't a login, it's permission to drain the wallet. When in doubt, don't sign.

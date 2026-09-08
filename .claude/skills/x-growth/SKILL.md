@@ -36,7 +36,9 @@ Cada corrida decide su modo por el último timestamp de `data/x-metrics.jsonl` /
 5. **Research.** Para 2–4 temas de `INTERESES.md` con movimiento (o pedidos por el usuario): `WebSearch` / `WebFetch`. Buscar catalizador concreto, no vibes. Números de mercado → verificar en DexScreener antes de usarlos; si no se puede, `n/d`.
 6. **Generar / refrescar drafts.** 1–3 drafts, cada uno en 1 pilar, formato de `skill:publish`:
    `content/drafts/YYYY-MM-DD-<slug>.md` con Estado `NO PUBLICAR`, versión hilo + post único + corta.
+   **Texto publicable SIEMPRE en inglés** (headers/notas internas pueden ser español).
    Reutilizar ideas de `data/ideas.jsonl` (cat `content`) antes de inventar.
+   Al mencionar SPARK: contract `0x0FB07c88Bc6d195c196279523957C004eb868248` (Base), no el cashtag.
 7. **Registrar.** Cada draft → línea en `content/queue.jsonl` (`estado:"borrador"` o `"listo"`), fila en `content/calendar.md`. Ideas nuevas → `data/ideas.jsonl` (`I0xx`, score rúbrica CLAUDE.md).
 8. **Ledger.** Fila en `LEDGER.md` `tipo=time` con lo hecho.
 9. **Commit local.** Push solo si no pide credenciales.
@@ -47,6 +49,7 @@ Cada corrida decide su modo por el último timestamp de `data/x-metrics.jsonl` /
 
 ## Prohibido
 - Publicar, responder, dar like, seguir, guardar — cualquier acción de escritura en X.
+- Drafts publicables en español (van en inglés).
 - Subagentes para Chrome/X. Chrome fuera del hilo padre. API de X. Scraping masivo.
 - Tocar temas de política o de Chile.
 - Citar números de mercado sin fuente viva.

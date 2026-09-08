@@ -3,12 +3,18 @@
 Fuente de verdad para research y generación de contenido. Se actualiza cuando cambian
 holdings o narrativas, no cada día.
 
+## IDIOMA DE LOS POSTS
+**Todos los posts en X van en INGLÉS.** Sin excepción (decisión del usuario 2026-09-08).
+Las notas internas y los headers de los drafts pueden quedar en español; el texto publicable no.
+
 ## Holdings (holder declarado — seguir de cerca, NUNCA shill)
 - **$NPC** — holder. Narrativa meme / "normie". Trackear precio, volumen, catalizadores, de qué chain habla el timeline.
 - **$CAKE** — holder. PancakeSwap. Ángulo vivo: bStocks / tokenized stocks (NVDA/SPY/TSLA/GME), ~$75M/24h, "venue #1 onchain". $CAKE = infra, no meme.
-- **$SPARK** — holder. Token del **ecosistema vibe/vibe** (Seedify sobre Robinhood Chain), narrativa liderada por **@meta_alchemist**. Ver `ecosystem/spark-rhc.md`.
-  - NO es `$SPK` de Spark Protocol (Base/Ethereum, MakerDAO/Sky) → ese airdrop está **CERRADO** (claim venció 2025-12-17). Nunca cruzar los dos.
-  - $SPARK = "tech token" del stack Seedify; el reward "confirmado" es el 5% del **nuevo $SFUND** a testnet users + creators (Season 0, ETA ~sept 2026, dicho por @meta_alchemist, sin contrato). NFTs "Vibe Vibers": 200k $SPARK = 1 NFT.
+- **$SPARK** — holder. Token del **ecosistema vibe/vibe** (@meta_alchemist). Ver `ecosystem/spark-rhc.md`.
+  - **Contract (verificado DexScreener 2026-09-08): `0x0FB07c88Bc6d195c196279523957C004eb868248` en BASE.** Par principal SPARK/ETH en Uniswap (Base), ~$85k liq, ~$0.00157.
+  - **El cashtag `$SPARK` en X enruta al token EQUIVOCADO** (Spark Protocol / `$SPK`, MakerDAO/Sky). En todo post que mencione SPARK: **pegar el contract o el link de dexscreener**, no confiar en el cashtag.
+  - NO es `$SPK` de Spark Protocol → ese airdrop está **CERRADO** (claim venció 2025-12-17). Nunca cruzar los dos.
+  - Reward "confirmado": 35% de $SPARK a stakers de $SFUND; el $SFUND actualizado abre IDOs permisionados + bonding curves de vibe/vibe. "Dicho, sin contrato": 5% del **nuevo $SFUND** a testnet users + creators (Season 0, ETA ~sept 2026, por @meta_alchemist). NFTs "Vibe Vibers": 200k $SPARK = 1 NFT.
   - Regla: números de mercado de $SPARK solo con fuente viva. "ETA septiembre" no es fecha firme. Cero conexión de wallet a sitios de claim.
 
 ## Narrativas que rinden (temas de research + drafts)

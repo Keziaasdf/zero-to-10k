@@ -1,42 +1,43 @@
-# DRAFT — post/hilo: "$CAKE como venue de stock-tokens"
+# DRAFT — post/thread: "$CAKE as a stock-token venue"
 Estado: NO PUBLICAR. Publicar solo con "PUBLICA AHORA".
 Pilar: P3 señal de ecosistema.
-Tema / objetivo: PancakeSwap se posiciona como venue #1 de stock-tokens (NVDA/SPY/TSLA/GME). Observación de holder, sin call, sin shill. Ata a la tesis de SafeCheck: el volumen no es la señal.
-Disclosure: holder de $CAKE. Va explícito en el post.
-Datos (research 2026-09-08, verificar precio exacto en DexScreener/CoinGecko antes de publicar):
-- PancakeSwap cruzó **$1B de volumen acumulado en activos tokenizados**; se agregaron **10 bStocks nuevos** (ASML, Netflix, Super Micro, IREN, Coherent, Credo, Astera Labs, AST SpaceMobile, Bitmine, USA Rare Earth), BEP-20 respaldados 1:1 con acción real en custodio regulado.
+IDIOMA: inglés. Disclosure: holder de $CAKE, explícito en el post.
+
+Datos (research 2026-09-08 — refrescar precio de $CAKE en DexScreener/CoinGecko antes de publicar):
+- PancakeSwap cruzó **$1B de volumen acumulado en activos tokenizados**; sumó **10 bStocks nuevos** (ASML, Netflix, Super Micro, IREN, Coherent, Credo, Astera Labs, AST SpaceMobile, Bitmine, USA Rare Earth), BEP-20 respaldados 1:1 con acción real en custodio regulado.
 - Es el venue con mayor share de bStocks en BNB Chain.
-- $CAKE ~$2.27 (visto en chart semanal de @cryptojack4u), +3.6% en el rebote de alts. NO citar precio sin refrescar.
+- $CAKE ~$2.27, +3.6% en el rebote de alts (visto en chart de @cryptojack4u). NO citar precio sin refrescar.
+- $CAKE cashtag en X: verificar que enrute a PancakeSwap y no a otro token antes de usarlo; si dudás, pegá el contract.
 
 ---
 
-## Versión post único
+## Single post
 
-Soy holder de $CAKE, sesgo declarado.
+Holder of $CAKE, bias stated.
 
-PancakeSwap pasó $1B de volumen acumulado en activos tokenizados y sumó 10 bStocks nuevos (ASML, Netflix, IREN, Super Micro...). Es el venue #1 de stock-tokens en BNB Chain.
+PancakeSwap just crossed $1B in cumulative tokenized-asset volume and added 10 new bStocks (ASML, Netflix, IREN, Super Micro...). It's now the #1 venue for stock-tokens on BNB Chain.
 
-Antes de creerle al número, tres cosas que miro en cualquier stock-token onchain:
-- respaldo: ¿hay acción real 1:1 en un custodio, o es sintético?
-- contraparte del par: ¿stablecoin líquida o token del propio ecosistema?
-- controles: quién puede pausar, mintear o congelar el token
+Before trusting the number, three things I check on any onchain stock-token:
+- backing: is there a real 1:1 share at a regulated custodian, or is it synthetic?
+- pair counterparty: a liquid stablecoin, or the ecosystem's own token?
+- controls: who can pause, mint or freeze the token?
 
-El volumen es la parte fácil de mostrar. Lo otro es lo que te deja salir.
+Volume is the easy part to show. The rest is what lets you get out.
 
-## Versión hilo (4)
+## Thread (4)
 
-1/ Disclosure: holder de $CAKE. Esto es observación, no call.
+1/ Disclosure: I hold $CAKE. This is an observation, not a call.
 
-2/ Los números de esta semana: PancakeSwap cruzó $1B de volumen acumulado en activos tokenizados y agregó 10 bStocks nuevos (ASML, Netflix, IREN, Super Micro, Coherent, Credo...). BEP-20 respaldados 1:1 con la acción real en custodio regulado. Ya es el venue con más share de bStocks en BNB Chain.
+2/ This week's numbers: PancakeSwap crossed $1B in cumulative tokenized-asset volume and added 10 new bStocks (ASML, Netflix, IREN, Super Micro, Coherent, Credo...). BEP-20, backed 1:1 by the real share at a regulated custodian. It already has more bStocks share than any other DEX on BNB Chain.
 
-3/ El volumen es lo fácil de mostrar. Lo que decide si podés entrar y salir sin comerte el spread:
-- respaldo real 1:1 vs sintético
-- contraparte del par: ¿stablecoin líquida o token del mismo ecosistema?
-- profundidad de la pool a distintos tamaños de orden
-- controles del stock-token: mint, pausa, freeze — quién los tiene
+3/ Volume is the easy thing to display. What decides whether you can get in and out without eating the spread:
+- real 1:1 backing vs synthetic
+- pair counterparty: liquid stablecoin or the same ecosystem's token?
+- pool depth at different order sizes
+- token controls: mint, pause, freeze — who holds them
 
-4/ Es la misma lógica que estoy metiendo en SafeCheck para memecoins: la liquidez real y los permisos del contrato dicen más que el gráfico. https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/
+4/ Same logic I'm building into SafeCheck for memecoins: real liquidity and contract permissions say more than the chart. https://keziaasdf.github.io/zero-to-10k/experiments/001-solana-safecheck/
 
-## Versión corta (reply/quote)
+## Short (reply/quote)
 
-Holder de $CAKE, sesgo declarado. PancakeSwap pasó $1B en tokenizados y sumó 10 bStocks. Antes del volumen miro: respaldo 1:1 real, contraparte del par y quién puede pausar/mintear el token.
+Holder of $CAKE, bias stated. PancakeSwap crossed $1B in tokenized assets and added 10 bStocks. Before the volume I look at: real 1:1 backing, pair counterparty, and who can pause/mint the token.

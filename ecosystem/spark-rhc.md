@@ -6,6 +6,7 @@
 ## Qué es
 - **Spark Protocol `$SPK`** (Base/Ethereum, "Spark Protocol" DeFi de MakerDAO/Sky): airdrop **CERRADO**, claim vencía **2025-12-17**. → **Cero hunt de claim SPK.** No confundir con nada de RHC.
 - **Spark en RHC** (`@usespark_` / usespark.fun): launchpad / hook de **Uniswap v4** sobre Robinhood Chain. Distinto del `$SPK` de arriba. Se trackea como **experimento de ecosistema + tema de contenido**, no como drop prometido.
+- **Token `$SPARK` del ecosistema vibe (el que tiene el usuario)**: contract `0x0FB07c88Bc6d195c196279523957C004eb868248` en **Base** (verificado DexScreener 2026-09-08). Par SPARK/ETH Uniswap Base, ~$85k liq, ~$0.00157. Distinto de `$SPK`. El cashtag `$SPARK` en X enruta a `$SPK` → en contenido pegar contract/dexscreener.
 - **Seedify `vibe/vibe` Season 0** (RHC **testnet 46630**): launchpad donde se crean/tradean tokens de prueba. Seedify prometió **5% del NUEVO `$SFUND`** a testnet users + token creators, ETA ~sept 2026. Es el único componente con reward "confirmado" (por @meta_alchemist, no contrato).
   - NFTs "Vibe Vibers": 200k `$SPARK` = 1 NFT (la wallet del usuario tiene ~400k → 2). Reglas revisadas varias veces (stakers tier 6+, Phoenix Sale). Meta dijo que publicaría una tool para calcular NFTs+SFUND — correr la wallet ahí **cuando salga**.
 

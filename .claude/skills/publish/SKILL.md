@@ -23,7 +23,7 @@ Tema / objetivo:
 
 ## Pasos
 1. Leer `ecosystem/x-account.md` (voz, reglas) y `../robinhood-chain/content-ops/VOICE-GUIDE.md` (solo lectura).
-2. Escribir/editar el draft. Español, directo, sin hype, sin "consejo de inversión", sin shill de token propio.
+2. Escribir/editar el draft. **Texto publicable en INGLÉS** (decisión 2026-09-08; headers/notas internas pueden ir en español). Directo, sin hype, sin "consejo de inversión", sin shill de token propio. Al mencionar SPARK usar el contract `0x0FB07c88Bc6d195c196279523957C004eb868248` (Base), no el cashtag (enruta mal en X).
 3. Verificar cualquier número de mercado en DexScreener (fuente viva) antes de dejarlo en el draft.
 4. Registrar en `content/queue.jsonl`:
    `{"ts":"YYYY-MM-DD","slug":"...","tipo":"hilo|post|reply","tema":"...","estado":"borrador|listo|publicado","archivo":"content/drafts/..."}`
