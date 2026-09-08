@@ -12,7 +12,10 @@ Ciclo corto. Presupuesto: **~15–25 tool calls**, sin subagentes. Chrome solo s
 2. **X (opcional)**: solo si hay una pregunta concreta que responder. Si sí → skill `ingest-x` (máx 8–12 min, 40 posts). Si no aporta a la apuesta, saltar.
 3. **BUILD**: un incremento real de la apuesta activa (código/archivo). Si la apuesta es I001, trabajar en `experiments/001-solana-safecheck/`.
 4. **DRAFTS**: si hay algo que decir, actualizar `content/drafts/` + `content/queue.jsonl`. No publicar.
-5. **HUNT**: skill `hunt` — refrescar `data/bounties.jsonl` con lo que sigue abierto y sus deadlines. Quitar lo vencido.
+5. **HUNT** (local — es el ÚNICO lugar donde corre; el cron cloud `trig_01EFCGHwx3wAj8wtPMJv1xih` está desactivado desde 2026-09-08 porque el entorno cloud bloquea `superteam.fun` y no puede pushear): seguí la skill `hunt`. En resumen:
+   - `curl -sL "https://superteam.fun/api/listings?type=bounty&take=40"` (redirect 308 desde `earn.superteam.fun`).
+   - Actualizá `data/bounties.jsonl`: `estado:"cerrado"` lo vencido, agregá abiertos con encaje a la apuesta activa, marcá en `nota` los que vencen en <72h. No inventes bounties.
+   - Si la API no responde, dejá el archivo intacto y anotalo en el briefing.
 6. **LEDGER**: fila nueva en `LEDGER.md` con `tipo=time`, horas aprox, qué se hizo, experimento, resultado.
 7. **BRIEFING**: crear/actualizar `BRIEFING/YYYY-MM-DD.md` con las 8 secciones (X, ideas, decisión, build, drafts, hunting, capital, hacer/no-hacer/métrica).
 8. **STATE / PIPELINE / NEXT_ACTIONS**: reflejar cambios. Apuesta activa y kill date intactos salvo decisión del usuario.

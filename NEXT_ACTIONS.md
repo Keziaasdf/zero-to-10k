@@ -31,20 +31,16 @@
 - [ ] Revisar `data/bounties.jsonl`: quitar lo vencido, marcar lo que vence <72h.
 - [ ] (Opcional) Buscar fuente gratuita browser-CORS para "top holders". Si no hay → queda n/d. NO pedir ni hardcodear API keys.
 
-## Rutina diaria — /schedule (CREADA 2026-09-06)
-- Routine cloud: **"zero-to-10k daily-auto (HUNT + briefing)"** · id `trig_01EFCGHwx3wAj8wtPMJv1xih`
-- Cron `0 12 * * *` UTC = **09:00 America/Santiago**. Próxima corrida: 2026-09-07 ~09:02.
-- Panel: https://claude.ai/code/routines/trig_01EFCGHwx3wAj8wtPMJv1xih
-- **Qué hace (nube, sin Chrome/X):** HUNT vía API pública de Superteam Earn → actualiza `data/bounties.jsonl` (cierra vencidos, agrega abiertos), escribe `BRIEFING/<hoy>.md` con top-3 bounties + pendientes para la sesión local, ajusta NEXT_ACTIONS si algo venció, commit + push a master.
-- **Qué NO hace (queda para la sesión local interactiva):** leer X, build de SafeCheck, publicar drafts, enviar la submission del IDEATHON, cualquier cosa con Chrome/wallet.
-- Para pausar/editar/borrar: el panel de arriba o pedirlo en sesión.
+## Rutina diaria — cron MATADO 2026-09-08
+- Routine cloud `trig_01EFCGHwx3wAj8wtPMJv1xih` **DESACTIVADA** (`enabled:false`). No vuelve a correr.
+  - Motivo: el entorno cloud bloquea `superteam.fun` (egress) → no puede hacer HUNT; y `git push` daba 403 (sin acceso GitHub write) → los commits se perdían.
+  - Para borrarla del todo (opcional): https://claude.ai/code/routines → eliminar. Desactivada ya no gasta corridas.
+- **HUNT ahora vive 100% local**, como paso 5 de la skill `daily-loop` (curl a la API de Superteam desde esta máquina, que sí tiene salida). El briefing también se escribe en la sesión local.
 
 ## Motor X `x-growth` (montado 2026-09-08)
 - [ ] **Sesión local:** correr `X GROWTH` una vez para capturar **baseline** en `data/x-metrics.jsonl` (seguidores, siguiendo, impresiones_30d si carga analytics). Sin baseline no se mide crecimiento.
 - [ ] Confirmar con el usuario a qué token se refiere **$SPARK** (¿Spark Protocol `$SPK` — airdrop cerrado —, un token nuevo, o "ecosistema vibe/vibe"?). Ajustar `content/x/INTERESES.md`.
-- [ ] Elegir cómo loopea (una de dos, o ambas):
-  - Local diario: `/loop x-growth` en sesión con Chrome, o sumar `x-growth` como paso 4.5 de `daily-loop`.
-  - Cloud: sumar la **Lane RESEARCH** (research + drafts, sin métricas) a la routine `trig_01EFCGHwx3wAj8wtPMJv1xih`. La captura de alcance NO puede ir a cloud (necesita Chrome logueado).
+- [ ] Elegir cómo loopea: `/loop x-growth` en sesión con Chrome, o sumar `x-growth` como paso 4.5 de `daily-loop`. (Cloud descartado: la routine cloud está desactivada y el entorno no tiene Chrome logueado ni salida a las APIs que hacen falta.)
 - [ ] Revisar drafts nuevos: `2026-09-08-post-cake-bstocks` (verificar números en DexScreener), `2026-09-08-post-rhc-claim-scam`.
 - Publicar cualquiera de ellos: el usuario escribe `PUBLICA AHORA` + cuál.
 
