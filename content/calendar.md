@@ -16,7 +16,9 @@ Cadencia objetivo: **1 post/día**. Rotar pilares, no repetir el mismo 2 días s
 | 6 | `2026-09-07-post-unrealized-no-es-plata` | post | Unrealized vs realized PnL — la liquidez cobra la diferencia (P2) | borrador |
 | 7 | `2026-09-08-post-cake-bstocks` | post | $CAKE / bStocks: $1B en tokenizados + 10 nuevos; qué mirar antes del volumen (P3) | borrador (refrescar precio) |
 | 8 | `2026-09-08-post-rhc-claim-scam` | post/hilo | RHC no tiene token oficial: todo "claim site" es scam — checklist (P2) | borrador |
-| 9 | `2026-09-08-post-spark-vibe-season0` | hilo | $SPARK/vibe Season 0: confirmado vs dicho, $SPARK ≠ $SPK (P3) | borrador |
+| 9 | `2026-09-08-post-spark-vibe-season0` | post | SPARK/vibe Season 0: confirmado vs dicho, token correcto en Base (P3) | ✅ PUBLICADO EN |
+| — | `2026-09-08-post-cake-bstocks` | post | $CAKE / bStocks: PancakeSwap v3 top DEX stock-tokens (P3) | ✅ PUBLICADO EN |
+| 10 | `2026-09-08-post-vibe-coded-bots-correlation` | post | Vibe-coded trading bots converge → one correlated position (P2) | borrador |
 
 ## Señal fresca 2026-09-08 (de likes/bookmarks del usuario → `data/x-engage.jsonl`)
 - `$CAKE` Wyckoff accumulation (@cryptojack4u, 2 likes) → alimenta draft 7.
