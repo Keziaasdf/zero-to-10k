@@ -20,8 +20,9 @@
 - `data/bounties.jsonl`. Top encaje: **Superteam Ukraine IDEATHON** — 1000 USDG — **due 2026-09-15** (submission borrador en `content/drafts/2026-09-06-ideathon-submission.md`).
 - Muertos (NO son premio vivo): TxODDS x Solana $50k (cerró jul 2026), Colosseum Frontier (corrió abr–may 2026, esperar próximo anuncio).
 
-## Spike 2 — CONTENT + mapa Spark/RHC
-- `content/` montado (calendar, queue, 5 drafts). `ecosystem/spark-rhc.md` + `ecosystem/robinhood-chain.md` + `experiments/002-spark-rhc-watch/` mapean el frente. Nada publicado.
+## Spike 2 — CONTENT + motor de crecimiento X + mapa Spark/RHC
+- `content/` montado (calendar, queue, 8 drafts). `ecosystem/spark-rhc.md` + `ecosystem/robinhood-chain.md` + `experiments/002-spark-rhc-watch/` mapean el frente. Nada publicado.
+- 2026-09-08: **motor X `x-growth`** montado. `content/x/{INTERESES,pilares,metricas}.md` + skill `x-growth` + `data/x-{posts,metrics,engage}.jsonl`. Holdings del usuario a seguir (no shill): $NPC, $CAKE, $SPARK. Exclusión dura: política / Chile. Meta: 1 post/día + alcance creciente para airdrops/WL/dealflow. Pendiente: capturar baseline de métricas en sesión local + confirmar ticker de $SPARK.
 
 ## Frentes de ecosistema (referencia, no apuesta)
 - Spark/RHC: VIGILAR + contenido. `$SPK` airdrop CERRADO (claim venció 2025-12-17). RHC sin token oficial; claim sites = scam. Ver `ecosystem/spark-rhc.md`, `ecosystem/robinhood-chain.md`.

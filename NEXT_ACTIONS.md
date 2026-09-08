@@ -39,6 +39,15 @@
 - **Qué NO hace (queda para la sesión local interactiva):** leer X, build de SafeCheck, publicar drafts, enviar la submission del IDEATHON, cualquier cosa con Chrome/wallet.
 - Para pausar/editar/borrar: el panel de arriba o pedirlo en sesión.
 
+## Motor X `x-growth` (montado 2026-09-08)
+- [ ] **Sesión local:** correr `X GROWTH` una vez para capturar **baseline** en `data/x-metrics.jsonl` (seguidores, siguiendo, impresiones_30d si carga analytics). Sin baseline no se mide crecimiento.
+- [ ] Confirmar con el usuario a qué token se refiere **$SPARK** (¿Spark Protocol `$SPK` — airdrop cerrado —, un token nuevo, o "ecosistema vibe/vibe"?). Ajustar `content/x/INTERESES.md`.
+- [ ] Elegir cómo loopea (una de dos, o ambas):
+  - Local diario: `/loop x-growth` en sesión con Chrome, o sumar `x-growth` como paso 4.5 de `daily-loop`.
+  - Cloud: sumar la **Lane RESEARCH** (research + drafts, sin métricas) a la routine `trig_01EFCGHwx3wAj8wtPMJv1xih`. La captura de alcance NO puede ir a cloud (necesita Chrome logueado).
+- [ ] Revisar drafts nuevos: `2026-09-08-post-cake-bstocks` (verificar números en DexScreener), `2026-09-08-post-rhc-claim-scam`.
+- Publicar cualquiera de ellos: el usuario escribe `PUBLICA AHORA` + cuál.
+
 ## Revisar
 - [ ] Kill-check 2026-09-13: ¿demo pública live + submission IDEATHON enviada?
 - [ ] Watch blog.colosseum.com: próximo hackathon Colosseum
