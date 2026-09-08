@@ -27,14 +27,19 @@ Datos verificados (2026-09-08):
 
 6/ How I play it: use testnet, never connect the wallet to any "claim" site, no second wallet (Seedify retrodrops filter sybils). If anything asks for a deposit or a signature to "verify" — I stop. No rush.
 
-## Single post
+## Single post — PUBLICADO EN (repost tras borrar la versión ES)
 
-The $SPARK I hold is the vibe/vibe ecosystem token (@meta_alchemist): 0x0FB07c88Bc6d195c196279523957C004eb868248 on Base. Note the "$SPARK" cashtag on X routes to a different token (Spark Protocol / $SPK) — check the contract.
+The SPARK I hold is the vibe/vibe ecosystem token (@meta_alchemist), on Base:
+0x0FB07c88Bc6d195c196279523957C004eb868248
 
-Confirmed: 35% of $SPARK to $SFUND stakers; upgraded $SFUND opens IDOs + vibe/vibe bonding curves.
-Said, not signed: 5% of the new $SFUND to Season 0 testnet users + creators.
+The $SPARK cashtag on X points to a different token (Spark Protocol). Always check the contract.
 
-Farmed on testnet. No claim sites, no second wallet.
+Confirmed: 35% of SPARK goes to SFUND stakers; upgraded SFUND opens permissioned IDOs + vibe/vibe bonding curves.
+Said, not signed: 5% of the new SFUND for Season 0 testnet users + creators.
+
+Testnet only. No claim sites, no second wallet.
+
+https://dexscreener.com/base/0x0FB07c88Bc6d195c196279523957C004eb868248
 
 ## Short (reply/quote)
 
