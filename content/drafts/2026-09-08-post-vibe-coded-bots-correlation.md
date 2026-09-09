@@ -35,3 +35,13 @@ A green backtest doesn't tell you who else is running your exact strategy.
 ## Short (reply/quote)
 
 Vibe-coded trading bots converge: same prompts + same templates = same logic = one correlated position trying to exit through one door. A green backtest doesn't show you who else is running it.
+
+## Image brief (Grok) — concepto M3
+
+Concepto: cientos de bots de trading idénticos intentando salir todos por la misma puerta angosta.
+Formato: meme.
+Composición: sala tipo voxel/Minecraft; ~200 robots cúbicos idénticos amontonados empujando hacia una única puerta estrecha con cartel "EXIT"; un par ya aplastados; luz dura.
+Texto en imagen: arriba "EVERYONE'S BOT" · abajo "SAME EXIT".
+Estilo: blocky voxel / Minecraft-style 3D render, chunky characters, green and black palette, playful, clean lighting, meme caption top and bottom.
+Prompt Grok: "Blocky voxel Minecraft-style 3D render, a crowded room with about two hundred identical cube-shaped trading robots all shoving toward one narrow door labeled EXIT, a few robots squashed flat, harsh lighting, green and black color palette, playful meme style, bold white caption text at top reading 'EVERYONE'S BOT' and at bottom reading 'SAME EXIT', high contrast, readable as a thumbnail"
+Alt text: Cientos de robots cúbicos idénticos apretujados intentando salir por una sola puerta estrecha marcada EXIT.

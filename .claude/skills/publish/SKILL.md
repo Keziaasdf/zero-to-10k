@@ -19,7 +19,16 @@ Tema / objetivo:
 1/ ...
 ## Versión post único
 ## Versión corta
+
+## Image brief (Grok)   (opcional — solo si la imagen aporta)
+Concepto: ...
+Composición: ...
+Texto en imagen: "..."
+Estilo: <paleta de content/x/imagenes.md>
+Prompt Grok: <listo para pegar>
+Alt text: ...
 ```
+El usuario genera la imagen con Grok en otra sesión. Ver `content/x/imagenes.md`.
 
 ## Pasos
 1. Leer `ecosystem/x-account.md` (voz, reglas) y `../robinhood-chain/content-ops/VOICE-GUIDE.md` (solo lectura).
