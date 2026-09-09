@@ -34,7 +34,10 @@
 - **Posts en INGLÉS siempre** (decisión del usuario 2026-09-08). Notas internas en español.
 - Directo, sin hype, sin promesas de retorno. Listas > párrafos.
 - Nunca "consejo de inversión". Nunca shill de token propio.
-- $SPARK (holding) = contract `0x0FB07c88Bc6d195c196279523957C004eb868248` en Base. El cashtag `$SPARK` en X lleva a otro token ($SPK Spark Protocol) → pegar contract / dexscreener, nunca solo el cashtag.
+- $SPARK (holding) = contract `0x0FB07c88Bc6d195c196279523957C004eb868248` en Base (~$0.00157, MCAP ~$1.5M).
+  - **Al escribir `$SPARK` en el composer: esperar el dropdown y hacer click en la PRIMERA opción** (SPARK, contract `…8248`). Eso liga el cashtag al token correcto y la card de preview sale bien (chart verde, $0.00157). Verificado 2026-09-08 (post `2097486155897827347`).
+  - Sin seleccionar, `$SPARK` enruta a Spark Protocol ($SPK), token distinto.
+  - Igual incluir el contract en el texto como respaldo.
 
 ## Próxima acción
 - Cola de contenido en `content/queue.jsonl`, calendario en `content/calendar.md`.

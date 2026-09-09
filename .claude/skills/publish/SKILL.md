@@ -23,7 +23,7 @@ Tema / objetivo:
 
 ## Pasos
 1. Leer `ecosystem/x-account.md` (voz, reglas) y `../robinhood-chain/content-ops/VOICE-GUIDE.md` (solo lectura).
-2. Escribir/editar el draft. **Texto publicable en INGLÉS** (decisión 2026-09-08; headers/notas internas pueden ir en español). Directo, sin hype, sin "consejo de inversión", sin shill de token propio. Al mencionar SPARK usar el contract `0x0FB07c88Bc6d195c196279523957C004eb868248` (Base), no el cashtag (enruta mal en X).
+2. Escribir/editar el draft. **Texto publicable en INGLÉS** (decisión 2026-09-08; headers/notas internas pueden ir en español). Directo, sin hype, sin "consejo de inversión", sin shill de token propio. Incluir el contract de SPARK `0x0FB07c88Bc6d195c196279523957C004eb868248` (Base) en el texto.
 3. Verificar cualquier número de mercado en DexScreener (fuente viva) antes de dejarlo en el draft.
 4. Registrar en `content/queue.jsonl`:
    `{"ts":"YYYY-MM-DD","slug":"...","tipo":"hilo|post|reply","tema":"...","estado":"borrador|listo|publicado","archivo":"content/drafts/..."}`
@@ -32,4 +32,12 @@ Tema / objetivo:
 
 ## Al publicar (solo con PUBLICA AHORA)
 - Abrir `x.com/compose/post` en el hilo padre. Pegar. **Mostrar screenshot al usuario antes del click final.**
+- **CASHTAGS — seleccionar el token del dropdown (obligatorio para `$SPARK`).**
+  X enruta `$SPARK` por defecto al token equivocado (Spark Protocol). Procedimiento:
+  1. Escribir el texto sólo hasta `$SPARK` (ej: `type "The $SPARK"`).
+  2. Esperar 2s → aparece el dropdown de autocomplete de cashtag.
+  3. Screenshot. **Click en la PRIMERA opción** — es `SPARK · SPARK · Crypto · ~1.5M · 0x0fb0…8248` (~$0.00157). Verificar que el contract del item termina en `…8248` (Base).
+  4. Recién ahí escribir el resto del post. Usar `SFUND`/`SPARK` sin `$` en el cuerpo para no re-disparar el dropdown.
+  5. Confirmar que la card de preview muestra el token correcto (chart verde, `$0.00157`, MCAP ~$1.5M) antes de publicar.
+- Si aparece una card de auto-embed que no corresponde → quitarla con la X de la card.
 - Tras publicar: marcar `estado:"publicado"` + URL en `queue.jsonl`, fila en `LEDGER.md`.

@@ -12,7 +12,7 @@ Las notas internas y los headers de los drafts pueden quedar en español; el tex
 - **$CAKE** — holder. PancakeSwap. Ángulo vivo: bStocks / tokenized stocks (NVDA/SPY/TSLA/GME), ~$75M/24h, "venue #1 onchain". $CAKE = infra, no meme.
 - **$SPARK** — holder. Token del **ecosistema vibe/vibe** (@meta_alchemist). Ver `ecosystem/spark-rhc.md`.
   - **Contract (verificado DexScreener 2026-09-08): `0x0FB07c88Bc6d195c196279523957C004eb868248` en BASE.** Par principal SPARK/ETH en Uniswap (Base), ~$85k liq, ~$0.00157.
-  - **El cashtag `$SPARK` en X enruta al token EQUIVOCADO** (Spark Protocol / `$SPK`, MakerDAO/Sky). En todo post que mencione SPARK: **pegar el contract o el link de dexscreener**, no confiar en el cashtag.
+  - **Al publicar: escribir `$SPARK` → esperar dropdown → click en la 1ª opción** (SPARK, contract `…8248`). Así el cashtag queda ligado al token correcto y la card sale bien. Sin eso, `$SPARK` enruta a Spark Protocol / `$SPK`. Incluir el contract en el texto igual. Detalle en `.claude/skills/publish/SKILL.md`.
   - NO es `$SPK` de Spark Protocol → ese airdrop está **CERRADO** (claim venció 2025-12-17). Nunca cruzar los dos.
   - Reward "confirmado": 35% de $SPARK a stakers de $SFUND; el $SFUND actualizado abre IDOs permisionados + bonding curves de vibe/vibe. "Dicho, sin contrato": 5% del **nuevo $SFUND** a testnet users + creators (Season 0, ETA ~sept 2026, por @meta_alchemist). NFTs "Vibe Vibers": 200k $SPARK = 1 NFT.
   - Regla: números de mercado de $SPARK solo con fuente viva. "ETA septiembre" no es fecha firme. Cero conexión de wallet a sitios de claim.

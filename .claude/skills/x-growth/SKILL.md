@@ -38,7 +38,7 @@ Cada corrida decide su modo por el último timestamp de `data/x-metrics.jsonl` /
    `content/drafts/YYYY-MM-DD-<slug>.md` con Estado `NO PUBLICAR`, versión hilo + post único + corta.
    **Texto publicable SIEMPRE en inglés** (headers/notas internas pueden ser español).
    Reutilizar ideas de `data/ideas.jsonl` (cat `content`) antes de inventar.
-   Al mencionar SPARK: contract `0x0FB07c88Bc6d195c196279523957C004eb868248` (Base), no el cashtag.
+   Al mencionar SPARK: incluir el contract `0x0FB07c88Bc6d195c196279523957C004eb868248` (Base). Al publicar, seleccionar `$SPARK` del dropdown (1ª opción, `…8248`) — ver `skill:publish` §"Al publicar".
 7. **Registrar.** Cada draft → línea en `content/queue.jsonl` (`estado:"borrador"` o `"listo"`), fila en `content/calendar.md`. Ideas nuevas → `data/ideas.jsonl` (`I0xx`, score rúbrica CLAUDE.md).
 8. **Ledger.** Fila en `LEDGER.md` `tipo=time` con lo hecho.
 9. **Commit local.** Push solo si no pide credenciales.
