@@ -1,5 +1,17 @@
 # NEXT ACTIONS
 
+## ▶ AL PRENDER EL PC (arrancar por acá — orden)
+_Pausado 2026-09-08 noche. Todo commiteado y pusheado (HEAD `a1e7cc1`). Working tree limpio._
+
+1. **Relanzar el motor X** si se quiere seguir: `/loop 4h x-growth` en sesión con Chrome. El loop es de-sesión → murió al apagar. (Si no, correr `x-growth` a mano 1×/día.)
+2. **IDEATHON — urgente, deadline 2026-09-15** (Superteam Ukraine, 1000 USDG): resolver si el bounty es **global o Ukraine-only**; si aplica, copiar el bloque entre marcadores de `content/drafts/2026-09-06-ideathon-submission.md` al formulario de Superteam Earn. NO enviar sin confirmar elegibilidad.
+3. **HUNT local**: `curl -sL "https://superteam.fun/api/listings?type=bounty&take=40"` → actualizar `data/bounties.jsonl` (quitar vencidos, marcar <72h). Manic Bug Bounty vencía 2026-09-09 → probablemente ya cerrado.
+4. **Triage de ideas**: scorear I007 / I012 / I013 con la rúbrica de CLAUDE.md; decidir si alguna sube a spike de build.
+5. **Kill-check I001 (2026-09-13)**: ¿demo live (✓) + submission IDEATHON enviada? Si no está la submission, es el bloqueante.
+6. **Drafts en cola** (no publicar sin `PUBLICA AHORA`): `2026-09-07-post-unrealized-no-es-plata`, `2026-09-08-post-cake-bstocks` (refrescar precio $CAKE), `2026-09-08-post-rhc-claim-scam`, `2026-09-08-post-spark-vibe-season0`.
+
+---
+
 ## Hechas (2026-09-06)
 - [x] Setup + repo GitHub + Chrome desbloqueado en hilo padre
 - [x] Primera lectura de X → x-feed.jsonl, ideas.jsonl
@@ -37,7 +49,7 @@
   - Para borrarla del todo (opcional): https://claude.ai/code/routines → eliminar. Desactivada ya no gasta corridas.
 - **HUNT ahora vive 100% local**, como paso 5 de la skill `daily-loop` (curl a la API de Superteam desde esta máquina, que sí tiene salida). El briefing también se escribe en la sesión local.
 
-## Motor X `x-growth` (montado 2026-09-08 · loop /loop 4h activo)
+## Motor X `x-growth` (montado 2026-09-08 · loop DETENIDO al apagar el PC — relanzar con `/loop 4h x-growth`)
 - [x] Baseline capturado (2026-09-08): 406 seguidores / 1118 siguiendo / impresiones 4W 854 (cayendo desde pico Aug 30). En `data/x-metrics.jsonl`.
 - [x] $SPARK confirmado = token del ecosistema **vibe/vibe** (Seedify, narrativa de @meta_alchemist). NO es $SPK. `content/x/INTERESES.md` actualizado.
 - [x] Loop: `/loop 4h x-growth` en esta sesión local. Chrome máx 2×/día (baseline + 1 refresco); las demás corridas = research only.
