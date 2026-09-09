@@ -21,8 +21,11 @@
 - Muertos (NO son premio vivo): TxODDS x Solana $50k (cerró jul 2026), Colosseum Frontier (corrió abr–may 2026, esperar próximo anuncio).
 
 ## Spike 2 — CONTENT + motor de crecimiento X + mapa Spark/RHC
-- `content/` montado (calendar, queue, 8 drafts). `ecosystem/spark-rhc.md` + `ecosystem/robinhood-chain.md` + `experiments/002-spark-rhc-watch/` mapean el frente. Nada publicado.
-- 2026-09-08: **motor X `x-growth`** montado. `content/x/{INTERESES,pilares,metricas}.md` + skill `x-growth` + `data/x-{posts,metrics,engage}.jsonl`. Holdings del usuario a seguir (no shill): $NPC, $CAKE, $SPARK. Exclusión dura: política / Chile. Meta: 1 post/día + alcance creciente para airdrops/WL/dealflow. Pendiente: capturar baseline de métricas en sesión local + confirmar ticker de $SPARK.
+- `content/` montado. `ecosystem/spark-rhc.md` + `ecosystem/robinhood-chain.md` + `experiments/002-spark-rhc-watch/` mapean el frente.
+- 2026-09-08: **motor X `x-growth`** montado y corriendo. `content/x/{README,INTERESES,pilares,metricas,imagenes}.md` + skill `x-growth` + `data/x-{posts,metrics,engage}.jsonl`. Holdings a seguir (no shill): $NPC, $CAKE, $SPARK (contract `0x0FB07c88Bc6d195c196279523957C004eb868248`, Base). Exclusión dura: política / Chile. **Posts en inglés.** Baseline capturado (406 seg / impresiones 4W 854, cayendo).
+- **Publicados 2026-09-08 (EN, con `PUBLICA AHORA`):** spark-vibe-season0 v3 (`status/2097486155897827347`), cake-bstocks (`status/2097465822390218953`). Cadencia semana: 2/7.
+- Workflow de imágenes/memes (Grok, en otra sesión del usuario): `content/x/imagenes.md`.
+- Loop `/loop 4h x-growth` (de-sesión, relanzar al abrir consola).
 
 ## Frentes de ecosistema (referencia, no apuesta)
 - Spark/RHC: VIGILAR + contenido. `$SPK` airdrop CERRADO (claim venció 2025-12-17). RHC sin token oficial; claim sites = scam. Ver `ecosystem/spark-rhc.md`, `ecosystem/robinhood-chain.md`.
